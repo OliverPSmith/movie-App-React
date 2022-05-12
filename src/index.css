@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 25, 25);
+  color: rgb(180, 191, 201);
+}
+
+.container {
+  margin: 20px;
+  margin-top: 2rem;
+}
+
+.heading-row {
+  margin: 5px 5px 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 1px;
+}
+
+.heading-row input {
+  padding: 8px 15px;
+  background-color: rgb(180, 191, 201);
+  border: none;
+  border-radius: 5px;
+}
+.heading-row input:focus {
+  outline: none;
+}
+
+.movie-row {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+
+.movie-item {
+  margin-right: 20px;
+  transition: transform 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.movie-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+
+}
+
+.movie-item:hover .overlay {
+  opacity: 1;
+}
+.movie-item:hover .item-title h3 {
+  color: rgb(220, 227, 234);
+}
+
+.item-title {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  padding: 10px 40px;
+}
+
+.item-title h3 {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-family: 'Nixie One', cursive;
+}
+/*  
+.movie-item:hover .item-title {
+  display: none;
+} */
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  bottom: 0;
+  padding: 10px;
+  padding-bottom: 22px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.fav-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+.movie-item img {
+  width: 300px;
+  height: 365px;
+  object-fit: cover;
+}
+
+
+.fav-heading {
+  margin-top: 4rem;
+}
+
+.fav-movies {
+  margin-bottom: 4rem;
+}
